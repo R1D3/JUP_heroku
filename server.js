@@ -9,10 +9,6 @@ app.use(express.json())
 
 const port = process.env.PORT || 8000
 
-app.get('/', (req, res) => {
-  res.send('Javascript Under Pressure Test')
-})
-
 app.use('/api', test)
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('../front/build'))
