@@ -4,6 +4,7 @@ import test from './Routes/testCode.js'
 import path from 'path'
 
 const app = express()
+const __dirname = path.resolve()
 
 app.use(cors())
 app.use(express.json())
