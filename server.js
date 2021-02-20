@@ -1,7 +1,7 @@
 import express from 'express'
 import cors from 'cors'
 import test from './Routes/testCode.js'
-import path, { dirname } from 'path'
+import path from 'path'
 
 const __dirname = path.resolve()
 
@@ -13,13 +13,12 @@ const port = process.env.PORT || 8000
 app.use('/api', test)
 
 if (process.env.NODE_ENV === 'production') {
-  app.use('/static', express.static(path.join(__dirname, './front/build')))
+  app.use('/static', express.static(path.join(__dirname, '/front/build')))
   app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'front/build', 'index.html'), (e) => e ? res.send(__dirname) : null)
+    res.sendFile(path.join(__dirname, '/front/build', 'index.html'))
   })
 }
-console.log('DIRNAME => ' + __dirname)
-console.log(__dirname)
+
 app.listen(port, () => {
   console.log('Server app listening on port ' + port)
 })
