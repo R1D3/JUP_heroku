@@ -20,10 +20,10 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-favicon": "^2.0.1",
+    "babel-cli": "^6.26.0",
     "pm2": "^4.5.4"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
     "standard": "^16.0.3"
   }
 }
