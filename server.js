@@ -15,6 +15,8 @@ app.use('/api', test)
 if (process.env.NODE_ENV === 'production') {
   app.use('/static', express.static(path.join(__dirname, './front/build')))
 }
+console.log('DIRNAME => ' + __dirname)
+console.log(__dirname)
 app.listen(port, () => {
   console.log('Server app listening on port ' + port)
 })
