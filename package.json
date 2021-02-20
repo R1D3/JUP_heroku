@@ -9,7 +9,7 @@
     "start": "./node_modules/pm2/bin/pm2-runtime server.js --exp-backoff-restart-delay=100",
     "dev": "./node_modules/pm2/bin/pm2-runtime server.js --watch",
     "install-client": "cd front && npm install",
-    "heroku-postbuild": "npm run install-client && rpm run build"
+    "heroku-postbuild": "npm run install-client && npm run build"
   },
   "keywords": [],
   "author": "",
