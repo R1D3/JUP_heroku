@@ -1,6 +1,6 @@
 import apisauce from 'apisauce'
 
-export const create = (baseURL = 'http://5dbc6ea7922e.ngrok.io/api') => {
+export const create = (baseURL = '/api') => {
   const api = apisauce.create({
     baseURL,
     headers: {
