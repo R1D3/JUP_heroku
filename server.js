@@ -1,11 +1,9 @@
 import express from 'express'
 import cors from 'cors'
 import test from './Routes/testCode.js'
-import path, { dirname } from 'path'
-import { fileURLToPath } from 'url'
+import path from 'path'
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
+const __dirname = path.resolve()
 
 const app = express()
 app.use(cors())
