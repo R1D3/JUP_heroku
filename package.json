@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run build && ./node_modules/pm2/bin/pm2-runtime build/server.js --exp-backoff-restart-delay=100",
     "dev": "./node_modules/pm2/bin/pm2-runtime server.js --watch",
-    "install-client": "cd front && npm install",
+    "install-client": "cd front && npm install && npm run build",
     "heroku-postbuild": "npm run install-client && npm run build",
     "clean": "rm -rf build && mkdir build",
     "build": "npm run clean && npm run build-babel",
