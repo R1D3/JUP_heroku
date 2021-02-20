@@ -19,16 +19,16 @@ export const test = async (userFn, fn, args, fnName) => {
     for (const arg of args) {
       result.logs.push(`Testing ${fnName} (${JSON.stringify(arg)})`)
       result.output.push(JSON.stringify(fnToTest(arg)))
-      const debugLog = await getOutput(userFn, fnName, arg)
+      const debugLog = await getOutput(userFn, fnName, JSON.stringify(arg))
       result.debug.push(debugLog)
       if (fn(arg) === fnToTest(arg)) {
-        result.success.push(`RIGHT! ${fnToTest(arg)} was the good answer !`)
+        result.success.push(`RIGHT! ${JSON.stringify(fnToTest(arg))} was the good answer !`)
         if (i === args.length - 1) {
           result.finish = true
           break
         }
       } else {
-        result.error = `WRONG! Expected ${fn(arg)} but got ${fnToTest(arg)} !`
+        result.error = `WRONG! Expected ${JSON.stringify(fn(arg))} but got ${JSON.stringify(fnToTest(arg))} !`
         break
       }
       i++

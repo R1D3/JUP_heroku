@@ -1,6 +1,27 @@
 import { isEven, getExtension, arraySum, longestString, doubleIt } from './placeholders'
 import { _isEven, _getExtension, _arraySum, _longestString, _doubleIt } from './consignes'
 
+export const pageVariants = {
+  initial: {
+    opacity: 0,
+  },
+  in: {
+    opacity: 1,
+    transition: {
+      x: 0,
+      type: 'spring',
+      mass:0.4,
+      damping:8,
+    }
+  },
+  out: {
+    opacity: 0,
+    transition: {
+      ease: 'easeInOut'
+    }
+  },
+}
+
 export const levelContentArray = [
   {
     title: 'doubleIt',

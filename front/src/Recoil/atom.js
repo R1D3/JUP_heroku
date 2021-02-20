@@ -5,6 +5,11 @@ export const level = atom({
   default: 0
 })
 
+export const finish = atom({
+  key: 'finish',
+  default: false
+})
+
 export const loading = atom({
   key: 'loading',
   default: false
