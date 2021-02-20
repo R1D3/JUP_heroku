@@ -1,0 +1,25 @@
+{
+  "name": "back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/pm2/bin/pm2-runtime server.js --exp-backoff-restart-delay=100",
+    "dev": "./node_modules/pm2/bin/pm2-runtime server.js --watch",
+    "install-client": "cd ../front && npm install",
+    "heroku-postbuild": "npm run install-client && rpm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "pm2": "^4.5.4"
+  },
+  "devDependencies": {
+    "standard": "^16.0.3"
+  }
+}
