@@ -1,16 +1,17 @@
 import express from 'express'
 import cors from 'cors'
 import test from './Routes/testCode.js'
-import path from 'path'
+import path, { dirname } from 'path'
+import { fileURLToPath } from 'url'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
 
 const app = express()
-const __dirname = path.resolve()
-
 app.use(cors())
 app.use(express.json())
 
 const port = process.env.PORT || 8000
-
 app.use('/api', test)
 
 if (process.env.NODE_ENV === 'production') {
