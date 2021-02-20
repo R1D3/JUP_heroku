@@ -2,24 +2,29 @@
   "name": "back",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "./node_modules/pm2/bin/pm2-runtime server.js --exp-backoff-restart-delay=100",
+    "start": "npm run build && ./node_modules/pm2/bin/pm2-runtime build/server.js --exp-backoff-restart-delay=100",
     "dev": "./node_modules/pm2/bin/pm2-runtime server.js --watch",
     "install-client": "cd front && npm install",
-    "heroku-postbuild": "npm run install-client && npm run build"
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "clean": "rm -rf build && mkdir build",
+    "build": "npm run clean && npm run build-babel",
+    "build-babel": "babel -d ./build ./server -s"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel-preset-env": "^1.7.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "pm2": "^4.5.4"
+    "pm2": "^4.5.4",
+    "regenerator-runtime": "^0.13.7"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "standard": "^16.0.3"
   }
 }

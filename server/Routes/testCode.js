@@ -1,6 +1,7 @@
 import express from 'express'
 import { getArgsAndFunctionAccordingToLevel } from '../Utils/index.js'
 import { test } from '../Utils/test.js'
+import regeneratorRuntime from "regenerator-runtime"
 
 const router = express.Router()
 
