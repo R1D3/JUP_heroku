@@ -14,6 +14,9 @@ app.use('/api', test)
 
 if (process.env.NODE_ENV === 'production') {
   app.use('/static', express.static(path.join(__dirname, './front/build')))
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'front/build', 'index.html'))
+  })
 }
 console.log('DIRNAME => ' + __dirname)
 console.log(__dirname)
