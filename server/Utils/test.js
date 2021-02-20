@@ -1,5 +1,4 @@
-import { getOutput } from '../Utils/index.js'
-import regeneratorRuntime from "regenerator-runtime"
+import { getOutput } from './index.js'
 
 export const test = async (userFn, fn, args, fnName) => {
   try {
