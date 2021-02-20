@@ -13,7 +13,7 @@ const port = process.env.PORT || 8000
 app.use('/api', test)
 
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('./front/build'))
+  app.use('/static', express.static(path.join(__dirname, 'front/build')))
 }
 app.listen(port, () => {
   console.log('Server app listening on port ' + port)
