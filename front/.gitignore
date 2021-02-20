@@ -9,7 +9,7 @@
 /coverage
 
 # production
-# build/*.js disable build for heroku
+build
 
 # misc
 .DS_Store
