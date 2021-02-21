@@ -10,7 +10,7 @@ In the root directory, you can run:
 
 ### `npm run dev`
 
-# FRONT
+## FRONT
 
 In the front directory, you can run:
 
