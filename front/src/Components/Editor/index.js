@@ -13,13 +13,15 @@ const Editor = ({
   finish
 }) => {
   const variants = {
-    open: { opacity: 1, x: 0},
-    closed: { opacity: 0, x: '-100%', display: 'none'},
+    initial: { opacity: 0 },
+    open: { opacity: 1, x: 0 },
+    closed: { opacity: 0, x: '-100%', display: 'none' }
   }
   return (
     <motion.div
       className='flex justify-center items-center my-5'
-      animate={finish ? "closed" : "open"}
+      initial='initial'
+      animate={finish ? 'closed' : 'open'}
       variants={variants}
     >
       <AceEditor

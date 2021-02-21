@@ -52,7 +52,7 @@ const Home = ({ history }) => {
           <p className='self-center font-serif font-normal text-xs sm:text-xl md:text-2xl lg:text-4xl text-green-400'>
             {'Five functions to fill, One ticking clock.\u00a0'}
           </p>
-          <p className='self-center font-serif font-bold text-sm sm:text-xl md:text-2xl lg:text-4xl text-green-400 '>
+          <p className='self-center font-serif font-bold text-xs sm:text-xl md:text-2xl lg:text-4xl text-green-400 '>
             How fast can you code?
           </p>
         </motion.div>

@@ -1,6 +1,8 @@
 import apisauce from 'apisauce'
 
-export const create = (baseURL = '/api') => {
+const devApi = process.env.NODE_ENV !== 'production' ? 'http://localhost:8000' : ''
+
+export const create = (baseURL = devApi + '/api') => {
   const api = apisauce.create({
     baseURL,
     headers: {

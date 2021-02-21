@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import { useStopwatch } from 'react-timer-hook'
 import { useRecoilState, useRecoilValue, useResetRecoilState, useSetRecoilState } from 'recoil'
 import { level, editorText, consigne, resultLogs, loading, finish } from '../../Recoil/atom'
-import { levelContentArray } from '../../Utils'
 import { useWindowSize } from '../../Utils/useWindowSize'
 import Logger from '../../Components/Logger'
 import Timer from '../../Components/Timer'
@@ -13,7 +12,7 @@ import Editor from '../../Components/Editor'
 import Level from '../../Components/LevelStep'
 import { UseHandleCtrlEnter } from '../../Utils/useHandleCtrlEnter'
 import { motion } from 'framer-motion'
-import { pageVariants } from '../../Utils'
+import { pageVariants, levelContentArray } from '../../Utils'
 
 const api = create()
 
@@ -105,7 +104,6 @@ const Game = ({ history }) => {
     } else if (data.error) {
       lose.play()
     }
-    console.log(data)
     setFinish(data.finish)
     setResultLogs((oldResult) => [...oldResult, data])
     setLoading(false)
@@ -116,10 +114,10 @@ const Game = ({ history }) => {
     <div className='bg-gray-800 flex'>
       <motion.div
         className='h-screen w-screen flex flex-col justify-between items-center bg-gray-800 py-5'
-        initial="initial"
-        animate="in"
-        exit="out"
-        transition={{duration: 1}}
+        initial='initial'
+        animate='in'
+        exit='out'
+        transition={{ duration: 1 }}
         variants={pageVariants}
       >
         <div className='w-11/12 shadow-xl flex justify-between items-center bg-gray-700 p-3 rounded-xl mb-2'>
@@ -148,9 +146,10 @@ const Game = ({ history }) => {
           finish={_finish}
         />
         <motion.div
-          initial={{height: '25%'}}
-          animate={{height: _finish ? '80%' : '25%'}}
-          className={`w-11/12 flex justify-between shadow-xl items-center bg-gray-700 rounded-xl p-3`}>
+          initial={{ height: '25%' }}
+          animate={{ height: _finish ? '80%' : '25%' }}
+          className='w-11/12 flex justify-between shadow-xl items-center bg-gray-700 rounded-xl p-3'
+        >
           <Button
             onClick={validateCode}
             text='GO'

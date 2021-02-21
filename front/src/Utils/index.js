@@ -3,15 +3,15 @@ import { _isEven, _getExtension, _arraySum, _longestString, _doubleIt } from './
 
 export const pageVariants = {
   initial: {
-    opacity: 0,
+    opacity: 0
   },
   in: {
     opacity: 1,
     transition: {
       x: 0,
       type: 'spring',
-      mass:0.4,
-      damping:8,
+      mass: 0.4,
+      damping: 8
     }
   },
   out: {
@@ -19,7 +19,7 @@ export const pageVariants = {
     transition: {
       ease: 'easeInOut'
     }
-  },
+  }
 }
 
 export const levelContentArray = [

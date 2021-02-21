@@ -39,15 +39,15 @@ const Logger = ({ resultLogs, consigne, finishString }) => {
                       </p>
                       {
                         result.debug[j] &&
-                        <p className='bg-blue-300 shadow-xl font-mono text-sm sm:text-xl md:text-3xl p-2 rounded-md mt-3 mb-3'>
-                          {`debug => ${result.debug[j]}`}
-                        </p>
+                          <p className='bg-blue-300 shadow-xl font-mono text-sm sm:text-xl md:text-3xl p-2 rounded-md mt-3 mb-3'>
+                            {`debug => ${result.debug[j]}`}
+                          </p>
                       }
                       {
                         result.output[j] &&
-                        <p className='bg-blue-300 shadow-xl font-mono text-sm sm:text-xl md:text-3xl p-2 rounded-md mt-3 mb-3'>
-                          {`output => ${result.output[j]}`}
-                        </p>
+                          <p className='bg-blue-300 shadow-xl font-mono text-sm sm:text-xl md:text-3xl p-2 rounded-md mt-3 mb-3'>
+                            {`output => ${result.output[j]}`}
+                          </p>
                       }
                       {
                         result.success[j]
