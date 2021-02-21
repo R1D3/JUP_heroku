@@ -1,9 +1,19 @@
-# Getting Started with Node js and PM2
+# Masteos_interview_JUP
 
-## Available Scripts
+### `REACT JS/ NODE JS Javascript under pressure clone`
 
-In the project directory, you can run:
+## BACK
+
+In the root directory, you can run:
 
 ### `npm start`
 
 ### `npm run dev`
+
+# FRONT
+
+In the front directory, you can run:
+
+## `npm start`
+
+## live demo at : https://jupheroku.herokuapp.com/
