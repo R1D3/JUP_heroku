@@ -72,6 +72,11 @@ const sizing = {
 }
 
 module.exports = {
+  purge: [
+    './src/**/*.html',
+    './src/**/*.js'
+  ],
+
   colors: colors,
 
   screens: {

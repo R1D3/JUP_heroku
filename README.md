@@ -1,4 +1,4 @@
-# Masteos_interview_JUP
+# JAVASCRIPT UNDER PRESSURE
 
 ### `REACT JS/ NODE JS Javascript under pressure clone`
 
